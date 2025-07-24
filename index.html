@@ -725,7 +725,22 @@
             .hero p {
                 font-size: 1.2rem;
             }
-            
+            .hero {
+  background-image: url('https://bankragilgunawan.github.io/pangkas-rambut/icon/1753369894.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  padding: 100px 0;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6); /* hitam transparan */
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
+}
             .section-title h2 {
                 font-size: 2.5rem;
             }
@@ -783,16 +798,18 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>Pengalaman Gaya yang Elegan</h1>
-                <p>Layanan barbershop premium dengan sentuhan modern. Di mana tradisi bertemu dengan gaya.</p>
-                <div>
-                    <a href="#contact" class="btn btn-block">Pesan Janji Temu</a>
-                    <a href="#services" class="btn btn-block">Layanan Kami</a>
-                </div>
-            </div>
+  <div class="hero-overlay">
+    <div class="container">
+      <div class="hero-content">
+        <h1>Pengalaman Gaya yang Elegan</h1>
+        <p>Layanan barbershop premium dengan sentuhan modern. Di mana tradisi bertemu dengan gaya.</p>
+        <div>
+          <a href="#contact" class="btn btn-block">Pesan Janji Temu</a>
+          <a href="#services" class="btn btn-block">Layanan Kami</a>
         </div>
+      </div>
+    </div>
+  </div>
     </section>
 
     <!-- Services Section -->
