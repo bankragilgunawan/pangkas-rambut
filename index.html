@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elegant Barber | Barbershop Profesional</title>
+    <title>Djaya barberman | Barbershop Profesional</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -398,48 +398,148 @@
             color: var(--primary);
         }
         
-        /* Testimonials */
-        .testimonials {
-            padding: 100px 0;
-            background-color: var(--secondary);
-            color: var(--light);
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .testimonial {
-            text-align: center;
-            padding: 30px;
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        
-        .testimonial.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .testimonial-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .testimonial-text::before {
-            content: '"';
-            font-size: 4rem;
-            color: var(--primary);
-            opacity: 0.3;
-            position: absolute;
-            top: -20px;
-            left: -10px;
-        }
+       .testimonial-slider {
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonials {
+  padding: 100px 20px;
+  background-color: var(--secondary);
+  color: var(--light);
+  text-align: center;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.testimonial-slider {
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+}
+
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  opacity: 0.4;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial.active {
+  opacity: 1;
+}
+
+.testimonial-card {
+  background-color: var(--light);
+  color: var(--dark);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.testimonial-text::before {
+  content: "“";
+  font-size: 4rem;
+  color: var(--primary);
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: -10px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.client-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  object-fit: cover;
+}
+
+.client-details h4 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.client-details span {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+.dots {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: var(--light);
+  opacity: 0.4;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: var(--primary);
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--light);
+    opacity: 0.4;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dot.active {
+    opacity: 1;
+    background-color: var(--primary);
+}
         
         .client-info {
             display: flex;
@@ -783,7 +883,7 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">Elegant<span>Barber</span></a>
+                <a href="#" class="logo">Djaya<span>Barberman</span></a>
                 <ul class="nav-links">
                     <li><a href="#home">Beranda</a></li>
                     <li><a href="#services">Layanan</a></li>
@@ -879,57 +979,59 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <div class="section-title">
-                <h2>Apa Kata Klien Kami</h2>
+  <!-- Testimonials Section -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-title">
+      <h2>Apa Kata Klien Kami</h2>
+    </div>
+    <div class="testimonial-slider">
+      <div class="testimonial-track">
+        <div class="testimonial active">
+          <div class="testimonial-card">
+            <p class="testimonial-text">Djaya Barberman telah benar-benar mengubah pengalaman perawatan saya. Potongan rambut yang sempurna dan layanan yang luar biasa.</p>
+            <div class="client-info">
+              <img class="client-img" src="https://placehold.co/100x100/d4af37/2c2c2c?text=J" alt="James">
+              <div class="client-details">
+                <h4>James Wilson</h4>
+                <span>Klien Tetap</span>
+              </div>
             </div>
-            <div class="testimonial-slider">
-                <div class="testimonial active">
-                    <p class="testimonial-text">Elegant Barber telah benar-benar mengubah pengalaman perawatan saya. Perhatian terhadap detail, kualitas layanan, dan suasana secara keseluruhan membuatnya menjadi barbershop terbaik yang pernah saya kunjungi. Michael memberi saya potongan rambut yang sempurna yang telah saya cari selama bertahun-tahun!</p>
-                    <div class="client-info">
-                        <div class="client-img">
-                            <img src="https://placehold.co/100x100/d4af37/2c2c2c?text=J" alt="James">
-                        </div>
-                        <div class="client-details">
-                            <h4>James Wilson</h4>
-                            <span>Klien Tetap</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">Saya selalu merasa rileks dan disambut dengan hangat di Elegant Barber. Potongan rambutnya sangat presisi dan para barber benar-benar memahami apa yang saya inginkan. Layanan pelanggan yang luar biasa dan suasana yang elegan.</p>
-                    <div class="client-info">
-                        <div class="client-img">
-                            <img src="https://placehold.co/100x100/d4af37/2c2c2c?text=S" alt="Siti">
-                        </div>
-                        <div class="client-details">
-                            <h4>Siti Rahayu</h4>
-                            <span>Klien Baru</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <p class="testimonial-text">Tempat ini benar-benar luar biasa! Cukur handuk panasnya adalah pengalaman yang paling mewah yang pernah saya alami. Jenggot saya terasa sangat halus dan rapi. Saya pasti akan kembali lagi.</p>
-                    <div class="client-info">
-                        <div class="client-img">
-                            <img src="https://placehold.co/100x100/d4af37/2c2c2c?text=B" alt="Budi">
-                        </div>
-                        <div class="client-details">
-                            <h4>Budi Santoso</h4>
-                            <span>Klien Setia</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
+          </div>
         </div>
-    </section>
+        <div class="testimonial">
+          <div class="testimonial-card">
+            <p class="testimonial-text">Selalu merasa rileks dan disambut hangat di Djaya Barberman. Potongan sangat presisi, sangat recomended.</p>
+            <div class="client-info">
+              <img class="client-img" src="https://placehold.co/100x100/d4af37/2c2c2c?text=S" alt="Siti">
+              <div class="client-details">
+                <h4>Surya aditya</h4>
+                <span>Klien Baru</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-card">
+            <p class="testimonial-text">Selalu menjadi pilihan terbaik, tak menyangka hluarar biasa.</p>
+            <div class="client-info">
+              <img class="client-img" src="https://placehold.co/100x100/d4af37/2c2c2c?text=B" alt="Budi">
+              <div class="client-details">
+                <h4>Budi Santoso</h4>
+                <span>Klien Setia</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</section>
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
@@ -940,7 +1042,7 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h2>Hubungi Kami</h2>
-                    <p>Siap untuk mengalami perawatan pria yang terbaik? Pesan janji temu Anda hari ini dan temukan perbedaan Elegant Barber.</p>
+                    <p>Siap untuk mengalami perawatan pria yang terbaik? Pesan janji temu Anda hari ini dan temukan perbedaan Djaya Barberman.</p>
                     <div class="info-item">
                         <i>📍</i>
                         <div class="info-text">
@@ -1014,7 +1116,7 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Elegant Barber</h3>
+                    <h3>Djaya Barberman</h3>
                     <p>Layanan barbershop premium dengan sentuhan modern. Di mana tradisi bertemu dengan gaya dan setiap potongan adalah karya seni.</p>
                <div class="social-icons" style="display: flex; justify-content: flex-start; gap: 12px; margin-top: 10px;">
   <a href="#"><img src="https://bankragilgunawan.github.io/pangkas-rambut/icon/facebook.svg" alt="Facebook" width="24"></a>
@@ -1032,7 +1134,7 @@
                 </div>
                    <div class="footer-column">
                    <div class="copyright">
-                <p>&copy; 2025 Elegant Barber. Hak Cipta Dilindungi.</p>
+                <p>&copy; 2025 Djaya Barberman. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
@@ -1112,32 +1214,39 @@ Permintaan Khusus: ${message}`;
             observer.observe(el);
         });
 
-        // Testimonial slider
-        const testimonials = document.querySelectorAll('.testimonial');
-        const dots = document.querySelectorAll('.dot');
-        let currentTestimonial = 0;
+    const sliderTrack = document.querySelector('.testimonial-track');
+    const testimonials = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
 
-        function showTestimonial(index) {
-            testimonials.forEach(t => t.classList.remove('active'));
-            dots.forEach(d => d.classList.remove('active'));
-            testimonials[index].classList.add('active');
-            dots[index].classList.add('active');
-            currentTestimonial = index;
-        }
+    let currentIndex = 0;
 
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                showTestimonial(index);
-            });
+    function showSlide(index) {
+        const offset = -index * 100;
+        sliderTrack.style.transform = `translateX(${offset}%)`;
+
+        testimonials.forEach((t, i) => {
+            t.classList.toggle('active', i === index);
         });
 
-        // Auto-rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            showTestimonial(currentTestimonial);
-        }, 5000);
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    }
 
-        // Form submission
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            showSlide(currentIndex);
+        });
+    });
+
+    // Optional auto-slide
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % testimonials.length;
+        showSlide(currentIndex);
+    }, 6000);
+
+       // Form submission
         const form = document.getElementById('booking-form');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
